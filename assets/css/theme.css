@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    /* ===== Layout ===== */
+    --layout-max-width: 1000px;
+
+    /* ===== GLOBAL BACKGROUND ===== */
+    --color-bg-main: #22273b;
+    --color-bg-alt: #292e45;
+
+    /* ===== LARGE CARDS (PLAYER, SECTIONS) ===== */
+    --color-card-main: #2d3148;
+    --color-card-border: #43486a;
+    --color-item-outline: #787d9b;
+
+    /* ===== SMALL CARDS / ROWS ===== */
+    --color-card-small: #25293a;
+
+    /* ===== NAV / TABS (“TOP TRACKS…”) ===== */
+    --color-chip: #2b3044;
+    --color-chip-hover: #f0f1fd;
+    --color-chip-active: #4a4f72;
+
+    /* ===== TEXT ===== */
+    --color-text-main: #e3e7ff;
+    --color-text-secondary: #c5cbff;
+    --color-text-muted: #9fa6d7;
+
+    /* ===== PROGRESS BAR ===== */
+    --color-progress-bg: #353955;
+    --color-progress-fill: #c6ccff;
+
+    /* ===== SHADOWS ===== */
+    /* Main elevated card (top player, big sections) */
+    --shadow-card-elevated:
+        0 22px 50px rgba(5, 8, 22, 0.65),
+        0 8px 24px rgba(10, 14, 35, 0.40),
+        0 0 0 1px rgba(255, 255, 255, 0.03);
+
+    /* Nav bar pill (TOP TRACKS / YOUR PLAYLISTS / ARTISTS) */
+    --shadow-chip-elevated:
+        0 16px 38px rgba(5, 8, 22, 0.50),
+        0 6px 18px rgba(10, 14, 35, 0.30),
+        0 0 0 1px rgba(255, 255, 255, 0.02);
+
+    /* Small album tiles (bottom cards) */
+    --shadow-tile-elevated:
+        0 14px 30px rgba(5, 8, 22, 0.42),
+        0 4px 14px rgba(10, 14, 35, 0.22);
+
+    --shadow-tile-elevated-hover:
+        0 14px 30px rgba(5, 8, 22, 0.6),
+        0 4px 14px rgba(10, 14, 35, 0.35);
+
+    /* Large cover (player image) */
+    --shadow-cover-elevated:
+        0 12px 24px rgba(5, 8, 22, 0.55),
+        0 4px 10px rgba(5, 8, 22, 0.40),
+        0 0 0 1px rgba(255, 255, 255, 0.03);
+
+    /* Large cover hover */
+    --shadow-cover-hover:
+        0 20px 40px rgba(5, 8, 22, 0.72),
+        0 8px 18px rgba(10, 14, 35, 0.48),
+        0 0 0 1px rgba(255, 255, 255, 0.04);
+
+    /* Small cover shadow (bottom images) */
+    --shadow-cover-small:
+        0 8px 18px rgba(5, 8, 22, 0.40),
+        0 2px 6px rgba(10, 14, 35, 0.28);
+
+    /* Small cover hover */
+    --shadow-cover-small-hover:
+        0 12px 24px rgba(5, 8, 22, 0.55),
+        0 4px 10px rgba(10, 14, 35, 0.38);
+
+    /* Track index badge shadow */
+    --shadow-index: 0 8px 18px rgba(3, 7, 22, 0.75);
+
+    /*Tooltip shadow*/
+    --tooltip-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+
+    /*Active Button*/
+    --shadow-active-chip: 0 10px 22px rgba(5, 8, 22, 0.45),
+        0 4px 10px rgba(5, 8, 22, 0.30),
+        0 0 0 1px rgba(255, 255, 255, 0.03);
+
+    /* ===== BORDER RADIUS ===== */
+    --radius-lg: 24px;
+    --radius-md: 16px;
+
+    /* ===== FONT ===== */
+    --font-main: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+    /* Now playing: SONG TITLE */
+    --fs-now-title: clamp(2rem, 1.6rem + 0.8vw, 2.4rem);
+    /* ~32–38px */
+
+    /* Now playing: artist name under the main title*/
+    --fs-now-artist: clamp(1.05rem, 0.95rem + 0.35vw, 1.3rem);
+    /* ~17–21px */
+
+    /* "Now Playing" label text above the title Subtle label */
+    --fs-now-playing: clamp(0.9rem, 0.85rem + 0.2vw, 1.05rem);
+    /* ~14–17px */
+
+    /* Section / chip labels: TOP TRACKS, YOUR PLAYLISTS, ARTISTS*/
+    --fs-tab-label: clamp(0.78rem, 0.74rem + 0.15vw, 0.9rem);
+    /* ~12.5–14px */
+
+    /* Card title (song / playlist / artist name in the list section)*/
+    --fs-card-title: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+    /* ~16–20px */
+
+    /* Card secondary text (artist under song, "X tracks", etc.) */
+    --fs-card-meta: clamp(0.8rem, 0.76rem + 0.2vw, 0.95rem);
+    /* ~13–15px */
+
+    /* Tiny captions / helper text (time labels, footer, small hints) */
+    --fs-caption: clamp(0.7rem, 0.66rem + 0.15vw, 0.8rem);
+    /* ~11–13px */
+
+    /*Track index number*/
+    --fs-index: clamp(2.2rem, 1.8rem + 1vw, 3.4rem);
+    /* ~19–25px */
+}

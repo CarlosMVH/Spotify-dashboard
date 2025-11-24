@@ -1,0 +1,240 @@
+/* Section Title */
+.section__title {
+    /* ~25–32px */
+    font-size: clamp(1.6rem, 1.3rem + 0.5vw, 2rem);
+    color: var(--color-text-main);
+    font-weight: 700;
+    letter-spacing: 0.002em;
+    text-transform: uppercase;
+}
+
+.section__subtitle {
+    font-size: var(--fs-card-meta);
+    color: var(--color-text-secondary);
+    opacity: 0.95;
+}
+
+/*Player Card*/
+.player {
+    background-color: var(--color-card-main);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card-elevated);
+    padding: 1.75rem 2rem;
+    border: 2px solid var(--color-card-border);
+}
+
+.player__media a {
+    outline: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.player__media a:focus-visible {
+    outline: solid 2px var(--color-item-outline);
+    border-radius: var(--radius-md);
+    transform: scale(1.02);
+}
+
+.player__cover {
+    box-shadow: var(--shadow-cover-elevated);
+    transition: transform 0.3s ease-in-out;
+    will-change: auto;
+}
+
+.player__cover:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+    box-shadow: var(--shadow-cover-hover);
+}
+
+.player__now-playing h2 {
+    font-size: var(--fs-caption);
+    color: var(--color-text-muted);
+    font-weight: 600;
+}
+
+.player__now-playing img {
+    width: 12px;
+    height: 12px;
+    filter: brightness(0) saturate(100%) invert(66%) sepia(84%) saturate(203%) hue-rotate(197deg) brightness(88%) contrast(90%);
+}
+
+.player__title {
+    font-size: var(--fs-now-title);
+    color: var(--color-text-main);
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0.3rem 0;
+}
+
+.player__title a {
+    width: 100%;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.player__title:hover {
+    text-decoration: underline;
+}
+
+.player__artist {
+    font-size: var(--fs-now-artist);
+    color: var(--color-text-secondary);
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.player__artist a {
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.player__title a:focus-visible,
+.player__artist a:focus-visible {
+    text-decoration: underline;
+    outline: none;
+}
+
+.player__artist a:hover, .player__title a:hover {
+    text-decoration: underline;
+}
+
+.player__title a,
+.player__artist a:hover {
+    cursor: pointer;
+}
+
+.player__title a, .player__artist a {
+    width: 100%;
+    line-height: inherit;
+}
+
+.player__progress {
+    font-size: var(--fs-caption);
+    color: var(--color-text-muted);
+}
+
+.player__progress-bar {
+    flex: 1;
+    appearance: none;
+    height: 5px;
+    border-radius: 999px;
+    background: var(--color-progress-bg);
+    pointer-events: none;
+}
+
+.player__progress-bar::-webkit-slider-thumb {
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-progress-fill);
+}
+
+/*Menu*/
+.main-menu {
+    background-color: var(--color-card-main);
+    border-radius: 9999px;
+    box-shadow: var(--shadow-chip-elevated);
+}
+
+.main-menu__button {
+    letter-spacing: 0.12em;
+    font-size: var(--fs-tab-label);
+    color: var(--color-text-secondary);
+    font-weight: 500;
+    padding: 1.5rem 2rem;
+    border-radius: 9999px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.main-menu__button:focus-visible {
+    outline: solid 2px var(--color-item-outline);
+}
+
+.main-menu__button:hover {
+    color: var(--color-chip-hover);
+}
+
+/*Content Cards*/
+
+/*Content Title*/
+.content__title {
+    font-size: clamp(1.2rem, 1.1rem + 0.3vw, 1.6rem);
+    color: var(--color-text-main);
+    font-weight: 600;
+}
+
+.content__subtitle {
+    font-size: var(--fs-card-meta);
+    color: var(--color-text-muted);
+}
+
+.content-card {
+    background-color: var(--color-card-small);
+    padding: 0.75rem 1.25rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-card-border);
+    box-shadow: var(--shadow-tile-elevated);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.content-card::after {
+    font-size: var(--fs-index);
+    color: var(--color-text-muted);
+    pointer-events: none;
+    font-weight: 900;
+    text-shadow: var(--shadow-index);
+    outline: none;
+}
+
+.content-card:focus-visible {
+    outline: solid 2px var(--color-item-outline);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-tile-elevated-hover);
+}
+
+.content-card:hover {
+    box-shadow: var(--shadow-tile-elevated-hover);
+    transform: translateY(-5px);
+}
+
+.content-card__title {
+    font-size: var(--fs-card-title);
+    color: var(--color-text-main);
+    font-weight: 600;
+}
+
+.content-card__artist {
+    font-size: var(--fs-card-meta);
+    color: var(--color-text-secondary);
+}
+
+
+.content-card__cover {
+    box-shadow: var(--shadow-cover-small);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+    will-change: auto;
+}
+
+.content-card__cover:hover {
+    cursor: pointer;
+    box-shadow: var(--shadow-cover-small-hover);
+    transform: translateY(-2px);
+}
+
+.content-card__meta-extra {
+    font-size: var(--fs-card-meta);
+    color: var(--color-text-muted);
+    margin-top: 0.35rem;
+    line-height: 1.4;
+}
+
+.meta-extra__album {
+    color: var(--color-text-secondary);
+    font-weight: 500;
+}
+
+.meta-extra__duration,
+.meta-extra__plays {
+    opacity: 0.9;
+}
