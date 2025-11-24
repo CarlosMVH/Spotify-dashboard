@@ -1,86 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Song X</title>
+    <title>Tracktify - The Modern Spotify Dashboard</title>
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/utils.css">
+    <link rel="stylesheet" href="./assets/css/components.css">
+    <link rel="stylesheet" href="./assets/css/layout.css">
+    <link rel="stylesheet" href="./assets/css/theme.css">
+    <link rel="icon" href="./assets/img/icon.png">
 </head>
+
 <body>
-    <!--Tarjeta principal del reproductor-->
-    <div class="player-card">
+    <div class="app">
+        <header>
+            <div class="section__info">
+                <h1 class="section__title">Tracktify</h1>
+                <p class="section__subtitle">See your favorite tracks, playlists, and artists at a glance.</p>
+            </div>
+            <div class="player" role="region" aria-label="Now playing">
+                <div class="player__media">
+                    <a href="https://open.spotify.com/track/2xLMifQCjDGFmkHkpNLD9h?si=1d6f9977fe9146a6"
+                        rel="noopener noreferrer" target="_blank" data-tooltip="SICKO MODE · Travis Scott">
+                        <img class="player__cover" alt="Album cover for SICKO MODE"
+                            src="assets/img/sicko_mode_portrait.jpg" width="640" height="640">
+                    </a>
+                </div>
+                <div class="player__info">
+                    <div class="player__now-playing">
+                        <h2>Now Playing</h2>
+                        <img src="assets/img/spotify-logo.png" alt="" width="1024" height="1024" aria-hidden="true">
+                    </div>
 
-        <!--Espacio para la portada del album o imagen de la canción-->
-        <div class="song-cover"></div>
+                    <div class="player__meta" aria-live="polite">
+                        <h2 class="player__title"><a
+                                href="https://open.spotify.com/track/2xLMifQCjDGFmkHkpNLD9h?si=1d6f9977fe9146a6"
+                                rel="noopener noreferrer" target="_blank">SICKO MODE</a></h2>
+                        <h2 class="player__artist">
+                            <a href="https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY?si=8143cdde91454742"
+                                rel="noopener noreferrer" target="_blank">Travis Scott</a>
+                        </h2>
+                    </div>
 
-        <!--Contenedor de la información de la canción-->
-        <div class="song-info">
+                    <div class="player__progress" role="progressbar">
+                        <p>00:00</p>
+                        <input class="player__progress-bar" type="range" min="0" max="100" value="0" aria-hidden="true"
+                            tabindex="-1">
+                        <p>05:12</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Navigation bar -->
+        <nav class="main-menu" aria-label="Tracktify sections">
+            <button class="main-menu__button main-menu__button--active" aria-current="page">Top Tracks</button>
+            <button class="main-menu__button">Your Playlists</button>
+            <button class="main-menu__button">Artists</button>
+        </nav>
+        <main>
+            <!-- Content section (Most listened songs / Your playlists / Artists) -->
+            <section class="content" aria-labelledby="top-tracks-heading">
+                <div class="content__info">
+                    <h2 class="content__title" id="top-tracks-heading">Your Top Tracks</h2>
+                    <p class="content__subtitle">These are your 5 most played songs on Spotify right now.</p>
+                </div>
 
-            <!--Titulo de la canción-->
-            <h2 class="song-title">Song Title</h2>
+                <!-- Container for cards -->
+                <div class="content__row">
 
-            <!--Nombre del artista-->
-            <p class="artist">Artista</p>
+                    <!-- Card #1 -->
+                    <a class="content-card"
+                        href="https://open.spotify.com/track/3eekarcy7kvN4yt5ZFzltW?si=a715394b7fc24975" target="_blank"
+                        rel="noopener noreferrer">
+                        <div data-tooltip="HIGHEST IN THE ROOM · Travis Scott">
+                            <img class="content-card__cover" width="640" height="640"
+                                src="assets/img/highestintheroom_portrait.jpg"
+                                alt="Album cover for HIGHEST IN THE ROOM">
+                        </div>
+                        <div class="content-card__body">
+                            <div class="content-card__text">
+                                <span class="content-card__title">HIGHEST IN THE ROOM</span>
+                                <span class="content-card__artist">Travis Scott</span>
+                            </div>
+                            <p class="content-card__meta-extra">
+                                From <span class="meta-extra__album">Single</span>
+                                · <span class="meta-extra__duration">2:55</span>
+                                · Played <span class="meta-extra__plays">230</span> times
+                            </p>
+                        </div>
+                    </a>
 
-            <!--Barra de progreso de la canción-->
-            <div class="progress-bar"></div>
-        </div>
+                    <!-- Card #2 -->
+                    <a class="content-card"
+                        href="https://open.spotify.com/track/1C7NXX8UJ6pgNx8EkmyZDd?si=48bbb4225ce74926" target="_blank"
+                        rel="noopener noreferrer">
+                        <div data-tooltip="si te pillara · Beéle">
+                            <img class="content-card__cover" width="640" height="640"
+                                src="assets/img/sitepillara_portrait.jpg" alt="Album cover for Song Name">
+                        </div>
+                        <div class="content-card__body">
+                            <div class="content-card__text">
+                                <span class="content-card__title">si te pillara</span>
+                                <span class="content-card__artist">Beéle</span>
+                            </div>
+                            <p class="content-card__meta-extra">
+                                From <span class="meta-extra__album">Borondo</span>
+                                · <span class="meta-extra__duration">3:04</span>
+                                · Played <span class="meta-extra__plays">102</span> times
+                            </p>
+                        </div>
+                    </a>
+
+                    <!-- Card #3 -->
+                    <a class="content-card"
+                        href="https://open.spotify.com/track/4BoeWqezEFp7zLwsO7YtbD?si=2d459eef736a482f" target="_blank"
+                        rel="noopener noreferrer">
+                        <div data-tooltip="Raindrops · KSLV Noh">
+                            <img class="content-card__cover" width="640" height="640"
+                                src="assets/img/raindrops_portrait.jpg" alt="Album cover for Raindrops">
+                        </div>
+                        <div class="content-card__body">
+                            <div class="content-card__text">
+                                <span class="content-card__title">Raindrops</span>
+                                <span class="content-card__artist">KSLV Noh</span>
+                            </div>
+                            <p class="content-card__meta-extra">
+                                From <span class="meta-extra__album">Single</span>
+                                · <span class="meta-extra__duration">2:07</span>
+                                · Played <span class="meta-extra__plays">98</span> times
+                            </p>
+                        </div>
+                    </a>
+
+                    <!-- Card #4 -->
+                    <a class="content-card"
+                        href="https://open.spotify.com/track/0NYkwBwhz6CaYh19q9bYjZ?si=3d4c5f5f32c742f9" target="_blank"
+                        rel="noopener noreferrer">
+                        <div data-tooltip="Journey · KSLV Noh">
+                            <img class="content-card__cover" width="640" height="640"
+                                src="assets/img/journey_portrait.jpg" alt="Album cover for Journey">
+                        </div>
+                        <div class="content-card__body">
+                            <div class="content-card__text">
+                                <span class="content-card__title">Journey</span>
+                                <span class="content-card__artist">KSLV Noh</span>
+                            </div>
+                            <p class="content-card__meta-extra">
+                                From <span class="meta-extra__album">Single</span>
+                                · <span class="meta-extra__duration">2:16</span>
+                                · Played <span class="meta-extra__plays">64</span> times
+                            </p>
+                        </div>
+                    </a>
+
+                    <!-- Card #5 -->
+                    <a class="content-card"
+                        href="https://open.spotify.com/track/4hAb4pbqgfgwraiHongYZR?si=37cd08a21e624aa4" target="_blank"
+                        rel="noopener noreferrer">
+                        <div data-tooltip="Shiawase · Dion Timmer">
+                            <img class="content-card__cover" width="640" height="640"
+                                src="assets/img/shiawase_portrait.jpg" alt="Album cover for Shiawase">
+                        </div>
+                        <div class="content-card__body">
+                            <div class="content-card__text">
+                                <span class="content-card__title">Shiawase</span>
+                                <span class="content-card__artist">Dion Timmer</span>
+                            </div>
+                            <p class="content-card__meta-extra">
+                                From <span class="meta-extra__album">Single</span>
+                                · <span class="meta-extra__duration">3:37</span>
+                                · Played <span class="meta-extra__plays">50</span> times
+                            </p>
+                        </div>
+                    </a>
+
+                </div>
+            </section>
+        </main>
+        <footer>
+            <!-- Footer content -->
+            <p id="year"></p>
+        </footer>
     </div>
-
-    <!--Barra de navegación-->
-    <nav class="menu">
-
-        <!--Botón para ver las canciones más escuchadas-->
-        <button>Most Listened Song</button>
-        
-        <!--Botón para ver las playlists del usuario-->
-        <button>Your Playlists</button>
-
-        <!--Botón para ver los artistas -->
-        <button>Artists</button>
-
-    </nav>
-
-    <!--Sección de contenido (Most listened to songs/your-playlist/artists)-->
-    <section class="content-section">
-
-        <!--Título del contenido-->
-        <h3 class="content-title">Aquí va el titulo</h3>
-        
-        <!--Contenedor de las tarjetas -->
-        <div class="cards-row">
-
-            <!--Tarjeta #1-->
-            <div class="card">
-                <div class="card-cover"></div>
-                <p class="card-label">Elemento</p>
-            </div>
-
-            <!--Tarjeta #2-->
-            <div class="card">
-                <div class="card-cover"></div>
-                <p class="card-label">Elemento</p>
-            </div>
-
-            <!--Tarjeta #3-->
-            <div class="card">
-                <div class="card-cover"></div>
-                <p class="card-label">Elemento</p>
-            </div>
-
-            <!--Tarjeta #4-->
-            <div class="card">
-                <div class="card-cover"></div>
-                <p class="card-label">Elemento</p>
-            </div>
-
-            <!--Tarjeta #5-->
-            <div class="card">
-                <div class="card-cover"></div>
-                <p class="card-label">Elemento</p>
-            </div>
-
-        </div>
-
-    </section>
+    <script src="assets/js/ui.js"></script>
 </body>
+
 </html>

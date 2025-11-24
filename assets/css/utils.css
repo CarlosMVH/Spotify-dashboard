@@ -1,0 +1,97 @@
+/* Active state for main menu buttons */
+.main-menu__button--active {
+    background-color: var(--color-chip-active);
+    color: var(--color-text-main);
+    box-shadow: var(--shadow-active-chip);
+}
+
+/* Extra info content card */
+.content-card__meta-extra {
+    display: none;
+}
+
+/*Tooltip*/
+[data-tooltip] {
+    position: relative;
+}
+
+[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translateX(-50%) translateY(4px);
+
+    padding: 0.4rem 0.7rem;
+    border-radius: 999px;
+    background: rgba(10, 12, 26, 0.95);
+    color: var(--color-text-main);
+    font-size: var(--fs-caption);
+    white-space: nowrap;
+
+    box-shadow: var(--tooltip-shadow);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 20;
+
+    transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+[data-tooltip]:hover::after,
+[data-tooltip]:focus-visible::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Marquee Effect */
+/* Wrappers that clip the content */
+.player__title,
+.player__artist,
+.content-card__text {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Normal text state (no marquee yet) */
+.player__title a,
+.player__artist a,
+.content-card__title,
+.content-card__artist {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: visible;
+    will-change: transform;
+}
+
+/* When JS detects overflow, it adds .is-marquee */
+.is-marquee {
+    display: inline-block;
+    min-width: 100%;
+    animation: marquee-alt 14s linear infinite;
+}
+
+/* Pause when user interacts*/
+.is-marquee:hover {
+    animation-play-state: paused;
+}
+
+@keyframes marquee-alt {
+    0%, 10% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    90%, 100% {
+        transform: translateX(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .is-marquee {
+        animation: none;
+        transform: translateX(0);
+    }
+}
