@@ -70,12 +70,13 @@ It focuses on  **clean visual design**, **good accessibility practices**, and **
 
 ## 📁 Project Structure
 
+```text
 Spotify-dashboard/
 │
 ├─ index.html
 ├─ docs/
-│  ├─ README.md # General information about the proyect.
-│  └─ notes.md # Future features, pending tasks, etc.
+│  ├─ README.md        # General information about the project.
+│  └─ notes.md         # Future features, pending tasks, etc.
 │
 └─ assets/
    ├─ css/
@@ -84,6 +85,7 @@ Spotify-dashboard/
    │  ├─ components.css  # Player, nav, content cards, text styles
    │  ├─ layout.css      # Layout, flexbox, responsive behavior
    │  └─ theme.css       # Design tokens (colors, border radius, shadows, fonts)
+   │
    ├─ img/
    │  ├─ sicko_mode_portrait.jpg
    │  ├─ highestintheroom_portrait.jpg
@@ -92,13 +94,14 @@ Spotify-dashboard/
    │  ├─ journey_portrait.jpg
    │  ├─ shiawase_portrait.jpg
    │  └─ spotify-logo.png
+   │
    └─ js/
-      ├─ api.js # Nothing here yet
-      ├─ app.js # Nothing here yet
-      ├─ auth.js # Nothing here yet
+      ├─ api.js   # Nothing here yet
+      ├─ app.js   # Nothing here yet
+      ├─ auth.js  # Nothing here yet
       ├─ state.js # Nothing here yet
-      └─ ui.js # Marquee logic + footer year
-
+      └─ ui.js    # Marquee logic + footer year
+```
 ---
 
 ## 🚀 Getting Started
